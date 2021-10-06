@@ -16,7 +16,9 @@ namespace BrowserHistoryLogger.Models
             query =
                 @"SELECT url AS URL, title AS TITLE, time(last_visit_time / 1000000 + (strftime('%s','1601-01-01')), 'unixepoch', 'localtime') AS Time, date(last_visit_time / 1000000 + (strftime('%s','1601-01-01')), 'unixepoch') AS Date
                 FROM urls ORDER BY last_visit_time DESC LIMIT 50";
-            name = "Crome";
+            /*query =
+                @"SELECT url AS URL, title AS TITLE DESC LIMIT 50";*/
+            name = "Chrome";
         }
     }
 }
